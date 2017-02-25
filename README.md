@@ -1,0 +1,2 @@
+# dashboards
+Sample dashboard repository
