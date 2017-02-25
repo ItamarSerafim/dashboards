@@ -1,0 +1,23 @@
+{
+  "ids": {
+    "Category": 4,
+    "Department": 6,
+    "Product": 1
+  },
+  "models": {
+    "Category": {
+      "1": "{\"Title\":\"Furniture\",\"id\":1}",
+      "2": "{\"Title\":\"household appliance\",\"id\":2}",
+      "3": "{\"Title\":\"Electronic devices\",\"id\":3}"
+    },
+    "Department": {
+      "1": "{\"Title\":\"Home\",\"id\":1}",
+      "2": "{\"Title\":\"Agriculture\",\"id\":2}",
+      "3": "{\"Title\":\"Construction\",\"id\":3}",
+      "4": "{\"Title\":\"Garage\",\"id\":4}",
+      "5": "{\"Title\":\"Party\",\"id\":5}",
+      "6": "{\"Title\":\"IT\",\"id\":6}"
+    },
+    "Product": {}
+  }
+}

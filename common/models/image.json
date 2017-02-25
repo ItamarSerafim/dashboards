@@ -1,0 +1,34 @@
+{
+  "name": "Image",
+  "base": "Model",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "Alt": {
+      "type": "string",
+      "required": true
+    },
+    "Width": {
+      "type": "number"
+    },
+    "Height": {
+      "type": "number"
+    },
+    "DisplayType": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

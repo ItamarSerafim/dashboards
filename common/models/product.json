@@ -1,0 +1,45 @@
+{
+  "name": "Product",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Category": {
+      "type": [
+        "object"
+      ]
+    },
+    "Department": {
+      "type": "Department"
+    },
+    "Price": {
+      "type": "number",
+      "required": true
+    },
+    "Sold": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Categories": {
+      "type": "hasMany",
+      "model": "Category",
+      "foreignKey": "id"
+    },
+    "Department": {
+      "type": "belongsTo",
+      "model": "Department",
+      "foreignKey": "id",
+      "through": "Category"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
