@@ -1,0 +1,30 @@
+{
+  "name": "PricingTrackRecord",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ProductId": {
+      "type": "number",
+      "required": true
+    },
+    "Date": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "Price": {
+      "type": "number",
+      "required": true
+    },
+    "PriceBefore": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

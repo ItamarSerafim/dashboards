@@ -50,5 +50,9 @@
   "Image": {
     "dataSource": null,
     "public": false
+  },
+  "PricingTrackRecord": {
+    "dataSource": "dashboardDs",
+    "public": true
   }
 }

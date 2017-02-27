@@ -24,6 +24,10 @@
     },
     "Sold": {
       "type": "boolean"
+    },
+    "ProductPage": {
+      "type": "string",
+      "default": "client/products/default-product-page.html"
     }
   },
   "validations": [],
