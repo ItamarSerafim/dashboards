@@ -24,3 +24,30 @@ function sacar(x){
 var saquesTest = [1560, 872, 125, 49, 23, 10, 2, 5];
 var l = saquesTest.length;
 for(var i = 0; i < l; i++) console.log('R$' + saquesTest[i] + ' = ' + sacar(saquesTest[i]));
+
+//Sort algorithm:
+var items = [10,1,22,15,36,17,20,3,9,29];
+function sort(array, direction){
+	var l = array.length;
+	for(var i=0; i < l; i++){
+		var item = array[i];
+        for(var j=0; j < l; j++){
+			var desc = direction == 'desc' ;
+			if ((array[j] < item) && desc){
+				var itemTemp = array[i];
+				array[i] = array[j];
+				array[j] = itemTemp;
+			}
+			else if(array[j] > item){
+				var itemTemp = array[i];
+				array[i] = array[j];
+				array[j] = itemTemp;
+			}
+			console.log(array);
+        }
+	}
+	return array;
+}
+
+console.log('Before sorting: ',items);
+console.log('After sorting: ', sort(items));
