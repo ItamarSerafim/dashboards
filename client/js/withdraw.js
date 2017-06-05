@@ -25,6 +25,9 @@ var saquesTest = [1560, 872, 125, 49, 23, 10, 2, 5];
 var l = saquesTest.length;
 for(var i = 0; i < l; i++) console.log('R$' + saquesTest[i] + ' = ' + sacar(saquesTest[i]));
 
+
+//--------------------------------------------------------------
+
 //Sort algorithm:
 var items = [10,1,22,15,36,17,20,3,9,29];
 function sort(array, direction){
@@ -51,3 +54,19 @@ function sort(array, direction){
 
 console.log('Before sorting: ',items);
 console.log('After sorting: ', sort(items));
+
+
+//--------------------------------------------------------------
+
+//Given an array of integers, find all positive numbers that has an oposit in the same array.
+var array = [1,-1,2,-2,3,-3,4,-4,5,-5, 6, 7, -8,8];
+var posit = array.filter(function(item){return item >= 0 });
+var negat = array.filter(function(item){return item <= 0 });
+var hasOposit = [];
+var l = posit.length;
+for(var i = 0; i < l; i++){
+	var n = posit[i];
+	if(negat.indexOf(-n) != -1) hasOposit.push(n);
+}
+console.log(hasOposit);
+//[1, 2, 3, 4, 5, 8]
