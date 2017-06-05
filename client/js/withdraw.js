@@ -70,3 +70,35 @@ for(var i = 0; i < l; i++){
 }
 console.log(hasOposit);
 //[1, 2, 3, 4, 5, 8]
+
+
+//--------------------------------------------------------------
+
+//Find the biggest sequence:
+var sequencies = 'aabbcccddddffghiii';
+var sequenciesArray = [];//Array of sequencies
+var bigSequence;//The biggest sequence
+var firstOfSequence = sequencies[0];//The fisrt item of each sequence in a loop;
+var l = sequencies.length;
+var sequence = {size: 0, value: ''};
+for (var i = 0; i < l; i++){
+	var item = sequencies[i];
+	if(item == firstOfSequence){
+		sequence.size++; sequence.value += item;
+	}else{
+		sequenciesArray.push({size: sequence.size, value: sequence.value});//Push a clone
+		firstOfSequence = sequencies[i];
+		sequence = {size: 1, value: firstOfSequence};
+	}
+}
+//Add last sequence
+sequenciesArray.push(Object.assign({}, sequence));
+bigSequence = sequenciesArray[0];
+l = sequenciesArray.length;
+for (var i = 0; i < l; i++){
+	var currentSequence = sequenciesArray[i];
+	if (currentSequence.size > bigSequence.size) bigSequence = currentSequence;
+}
+
+console.log('The biggest sequen is: ', bigSequence);
+VM1119:26 The biggest sequen is:  Object {size: 4, value: "dddd"}
