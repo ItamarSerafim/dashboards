@@ -74,7 +74,7 @@ console.log(hasOposit);
 
 //--------------------------------------------------------------
 
-//Find the biggest sequence:
+//Find the biggest simple(not complex or composed) sequence:
 var sequencies = 'aabbcccddddffghiii';
 var sequenciesArray = [];//Array of sequencies
 var bigSequence;//The biggest sequence
